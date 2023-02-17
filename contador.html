@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTADOR DE CLICKS</title>
+    <link rel="shortcut icon" href="https://e7.pngegg.com/pngimages/291/30/png-clipart-click-arrow-icons-logos-emojis-click-here-buttons-thumbnail.png">
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(53, 39, 39);
+        }
+        h1{
+            text-align: center;
+            color: aliceblue;
+            font-size: 30px;
+        }
+        p{
+            color: aliceblue;
+        }
+        section{
+            text-align: center;
+            margin: 350px auto;
+        }
+        section .medio{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+        }
+        #btnClick{
+            background-color: rgb(57, 196, 52);
+        }
+        #btnClear{
+            background-color: brown;
+        }
+        button{
+            border: none;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 800;
+            color: white;
+            cursor: pointer;
+        }
+        #btnClear:hover{
+            background-color: rgb(236, 0, 0);
+        }
+        #btnClick:hover{
+            background-color: rgb(0, 255, 42);
+        }
+        #contarClick{
+            font-size: 45px;
+            font-weight: 800;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 10px;
+        }
+    </style>
+    <section>
+        <div class="medio"> 
+            <div>
+                <h1>¡Realiza la mayor cantidad de clicks!</h1>
+            </div>
+            <button id="btnClick">CLICK</button>
+            <button id="btnClear">RESET</button>
+            <p id="contarClick"></p>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var btnElm = document.getElementById("btnClick");
+        var btnClr= document.getElementById("btnClear")
+        var pElm = document.getElementById("contarClick");
+        var contar = 0;
+        pElm.textContent=0;
+        btnElm.onclick = function(){
+            contar++;
+            pElm.textContent = contar;
+        }
+        btnClr.onclick = function(){
+            contar=0;
+            pElm.textContent = contar;
+        }
+    </script>
+</body>
+</html>
